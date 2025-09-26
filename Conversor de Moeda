@@ -1,0 +1,8 @@
+real = float(input('Informe o valor em Real: R$'))
+dollar = 4.80
+euro = 5.23
+conversao = real / dollar
+conversao1 = real / euro
+
+print('O valor em Dólar é: US${: .2f}'.format(conversao))
+print('O valor em Euro é: €{:.2f}'.format(conversao1))
