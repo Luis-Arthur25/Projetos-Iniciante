@@ -1,0 +1,25 @@
+# Salário Líquido - sl, Aluguel - al, Conta de Água - ag, Conta de Luz - l, Conat de Internet - i, Gastos Total no(s) Cartão(ões) de Crédito - ct, Débito Automático - db,
+
+sl = float(input('Informe seu Salário Líquido: R$ '))
+al = float(input('Informe o Valor do Aluguel: R$ '))
+ag = float(input('Informe o Valor da Conta de Água: R$ '))
+l = float(input('Informe o Valor da Conta de Luz: R$ '))
+i = float(input('Informe o Valor da Conta de Internet: R$ '))
+op = str(input('Você possui Gastos no Cartão de Crédito? '))
+op1 = str(input('Você possui Gastos em Débito Automático? '))
+
+if op.upper() == 'SIM':
+    ct = float(input('Informe o Valor dos Gastos:R$ '))
+    livre = sl - al - ag - l - i - ct
+
+if op1.upper() == 'SIM' and op.upper() == 'SIM':
+    db = float(input('Informe o Valor dos Gastos: R$ '))
+    livre = sl - al - ag - l - i - ct - db
+
+if op1.upper() == 'SIM':
+    db = float(input('Informe o Valor dos Gastos: R$ '))
+    livre = sl - al - ag - l - i - db
+else:
+    livre = sl - al - ag - l - i
+
+print('Após pagar suas contas, Você tem R${:.2f} para uso livre'.format(livre))
