@@ -1,0 +1,28 @@
+valor = float(input('Informe o Valor das Compras: R$'))
+print('''FORMAS DE PAGAMENTO' 
+      [1] à vista dinheiro/cheque'
+      [2] à vista cartão'
+      [3] 2x no cartão'
+      [4] 3x ou mais no cartão''')
+op = int((input('Informe a opção: ')))
+
+
+desconto1 = valor - ((valor * 10) / 100)
+desconto2 = valor - ((valor * 5) / 100)
+juros = (valor * 20) / 100
+vjuros = valor + ((valor * 20) / 100)
+
+if op == 1:
+    print('Sua compra de R${:.2f} vai custar R${:.2f} no final'.format(valor,desconto1))
+elif op == 2:
+    print('Sua compra de R${:.2f} vai custar R${:.2f} no final'.format(valor,desconto2))
+elif op == 3:
+    p = int(input('Em quantas Parcelas? '))
+    x = valor/p
+    print('Sua compra de R${:.2f} vai custar duas parcaleas de R${:.2f}'.format(valor,x))
+else:
+    p = int(input('Em quantas Parcelas? '))
+    x = valor/p
+    vp = (valor + juros)/p
+    print('''Sua compra será parcelada em {}x de R${:.2f} com JUROS
+Sua compra de R${:.2f} vai custar R${:.2f} no final'''.format(p,vp,valor,vjuros))
