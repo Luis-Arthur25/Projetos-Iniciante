@@ -1,0 +1,7 @@
+dias = int(input('Informe por quantos dias ocorreu o aluguel do veículo: '))
+km = float(input('Informe quantos KM foram percorridos: km'))
+custoDias = dias * 60
+custoKm = km * 0.15
+total = custoDias + custoKm
+
+print('O valor total da locação é de R${:.2f}' .format(total))
