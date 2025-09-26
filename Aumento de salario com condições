@@ -1,0 +1,9 @@
+s = float(input('Informe o salário do funcionário: R$'))
+
+if s <= 1320:
+    ns = ((s * 15) / 100) + s
+    print('\033[31mO novo salário do funcionário é: R${:.2f}'.format(ns))
+
+else:
+    ns = ((s * 10)/ 100) + s
+    print('O novo salário do funcionário é: R${:.2f}'.format(ns))
